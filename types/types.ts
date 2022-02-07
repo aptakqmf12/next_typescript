@@ -1,9 +1,9 @@
-import { DetailedHTMLProps } from "react";
+import { DetailedHTMLProps, MetaHTMLAttributes } from "react";
 
 interface HeadType {
   title: string;
-  keyword: string;
-  content: string;
+  keywords: string;
+  description: string;
 }
 
 interface PhotoType {

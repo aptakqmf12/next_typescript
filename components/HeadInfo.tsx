@@ -2,13 +2,13 @@ import Head from "next/head";
 import React from "react";
 import { HeadType } from "../types/types";
 
-const HeadInfo: React.FC<HeadType> = ({ title, keyword, content }) => {
+const HeadInfo: React.FC<HeadType> = ({ title, keywords, description }) => {
   return (
     <>
       <Head>
+        <meta name="keywords" content={keywords} />
+        <meta name="description" content={description} />
         <title>{title}</title>
-        {/* <meta keyword={keyword} /> */}
-        <meta content={content} />
       </Head>
     </>
   );
@@ -16,8 +16,8 @@ const HeadInfo: React.FC<HeadType> = ({ title, keyword, content }) => {
 
 HeadInfo.defaultProps = {
   title: "next exmple",
-  keyword: "next ex",
-  content: "practice next js",
+  keywords: "next ex",
+  description: "practice next js",
 };
 
 export default HeadInfo;

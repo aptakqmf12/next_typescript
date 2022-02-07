@@ -1,13 +1,17 @@
-import HeadInfo from "../components/HeadInfo";
+import HeadInfo from "../../components/HeadInfo";
 import Image from "next/image";
-import PhotosStyles from "../styles/Photo.module.css";
+import PhotosStyles from "../../styles/Photo.module.css";
 import Link from "next/link";
-import { PhotoType } from "../types/types";
+import { PhotoType } from "../../types/types";
 
-const photos = (data: any) => {
+const photos = (data: { data: PhotoType[] }) => {
   return (
     <div>
-      {/* <HeadInfo title={"next example photos"} /> */}
+      <HeadInfo
+        title={"포토페이지"}
+        keywords={"사진, 상품"}
+        description={"사진들"}
+      />
       <h1>my photos</h1>
 
       <ul className={PhotosStyles.photos}>
